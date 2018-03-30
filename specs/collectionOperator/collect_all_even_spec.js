@@ -8,9 +8,7 @@ describe('collect_all_even', function () {
   var collection_b = [2, 4];
 
   it('选出给定区间中所有的偶数', function() {
-
-    var result = collect_all_even(collection_a);
+var result = collect_all_even(collection_a);
     expect(result).toEqual(collection_b);
   });
 });
-
