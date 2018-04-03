@@ -1,8 +1,11 @@
 'use strict';
 
 function double_to_one(collection) {
-
-  //在这里写入代码
+  var res = [];
+  for(let i of collection){
+    res = res.concat(i);
+  }
+  return res;
+  //return Array.prototype.concat.apply([],collection);
 }
-//console.log(flatten([1, 2, 3]));
 module.exports = double_to_one;
