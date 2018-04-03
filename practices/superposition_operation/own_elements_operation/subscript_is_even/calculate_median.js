@@ -1,13 +1,13 @@
 'use strict';
 var calculate_median = function(collection){
-// var uneven = collection.filter(function(ele,index){
-//   return index%2==1;
-// });
-// if(uneven.length%2==1){
-//   return uneven[Math.floor(uneven.length/2)];
-// }else{
-//   return (uneven[uneven.length/2 -1]+uneven[uneven.length/2])/2;
-// }
+var uneven = collection.filter(function(ele,index){
+  return index%2==1;
+});
+if(uneven.length%2==1){
+  return uneven[Math.floor(uneven.length/2)];
+}else{
+  return (uneven[uneven.length/2 -1]+uneven[uneven.length/2])/2;
+}
 }
 
 // var collection_a = [1, 2, 3, 4, 5, 6];

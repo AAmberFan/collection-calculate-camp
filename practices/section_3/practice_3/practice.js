@@ -1,23 +1,23 @@
 function create_updated_collection(collection_a, object_b) {
-  // var count = {};
-  // for (let ele of collection_a) {
-  //   if(count[ele]==null){
-  //     count[ele] =1;
-  //   }else{
-  //     count[ele] +=1;
-  //   }
-  // }
-  // var res = [];
-  // for(let i in count){
-  //   res.push({"key":i, "count":count[i]});
-  // }
-  // console.log(res);
-  // res.forEach(function(ele,index){
-  //   if(object_b.value.includes(ele.key)){
-  //     let mul= Math.floor( ele.count/3);
-  //     ele.count-=mul;
-  //   }
-  // });
+  var count = {};
+  for (let ele of collection_a) {
+    if(count[ele]==null){
+      count[ele] =1;
+    }else{
+      count[ele] +=1;
+    }
+  }
+  var res = [];
+  for(let i in count){
+    res.push({"key":i, "count":count[i]});
+  }
+  //console.log(res);
+  res.forEach(function(ele,index){
+    if(object_b.value.includes(ele.key)){
+      let mul= Math.floor( ele.count/3);
+      ele.count-=mul;
+    }
+  });
   return res;
 }
 // var collection_a = [

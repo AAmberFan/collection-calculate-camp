@@ -1,27 +1,27 @@
 function create_updated_collection(collection_a, object_b) {
-  // var res = [];
-  // var mySet = {};
-  // collection_a.forEach(function(i){
-  //    var ele = i.split(/[:\-\[\]]/);
-  //    //console.log(ele);
-  //     if(mySet[ele[0]]==null){
-  //       mySet[ele[0]] = (ele.length === 1)? 1:parseInt(ele[1]);
-  //     }
-  //     else{
-  //       mySet[ele[0]]+=(ele.length === 1)? 1:parseInt(ele[1]);
-  //     }
-  //   });
-  // //console.log(mySet);
-  // for(let j in mySet){
-  //   res.push({"key":j,"count":mySet[j]});
-  // }
-  //
-  // res.forEach(function(ele){
-  //   if(object_b.value.includes(ele.key)){
-  //     let mul= Math.floor( ele.count/3);
-  //     ele.count-=mul;
-  //   }
-  // });
+  var res = [];
+  var mySet = {};
+  collection_a.forEach(function(i){
+     var ele = i.split(/[:\-\[\]]/);
+     //console.log(ele);
+      if(mySet[ele[0]]==null){
+        mySet[ele[0]] = (ele.length === 1)? 1:parseInt(ele[1]);
+      }
+      else{
+        mySet[ele[0]]+=(ele.length === 1)? 1:parseInt(ele[1]);
+      }
+    });
+  //console.log(mySet);
+  for(let j in mySet){
+    res.push({"key":j,"count":mySet[j]});
+  }
+
+  res.forEach(function(ele){
+    if(object_b.value.includes(ele.key)){
+      let mul= Math.floor( ele.count/3);
+      ele.count-=mul;
+    }
+  });
   return res;
 }
 // var collection_a = [

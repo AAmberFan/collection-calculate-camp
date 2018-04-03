@@ -1,26 +1,28 @@
 'use strict';
 
 function median_to_letter(collection) {
-  // var medNum = Math.ceil(collection.length/2);
-  // var result =  numToLetter(collection[medNum]);
-  // return result;
+  var medNum = Math.ceil(collection.length/2);
+  var result =  numToLetter(collection[medNum]);
+  return result;
 }
-// function numToLetter(num){
-//   let mode;
-//   let did;
-//   let res = ''
-//   while(num>0){
-//     mode = num %26;
-//     did = Math.floor(num/26);
-//     if(mode ===0){
-//       did-=1;
-//       mode = 26;
-//     }
-//     res += String.fromCharCode(mode+96);
-//     res=res.split("").reverse().join("");
-//   }
-//   return res;
-// }
+function numToLetter(num){
+  let mode;
+  let did;
+  let res = ''
+  while(num>0){
+    mode = num %26;
+    did = Math.floor(num/26);
+    if(mode ===0){
+      did-=1;
+      mode = 26;
+    }
+    num =did;
+    res += String.fromCharCode(mode+96);
+
+  }
+  res=res.split("").reverse().join("");
+  return res;
+}
 
 // var collection = [20,21,22,23,24,25,26,27,28,29,
 //                   30,31,32,33,34,35,36,37,38,39,
